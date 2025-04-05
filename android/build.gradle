@@ -4,7 +4,9 @@ buildscript {
         minSdkVersion = 24
         compileSdkVersion = 35
         targetSdkVersion = 35
-        ndkVersion = "27.1.12297006"
+        enableHermes = true
+        enableNewArchitecture = true
+        ndkVersion = "29.0.13113456"
         kotlinVersion = "2.0.21"
     }
     repositories {
@@ -19,3 +21,10 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
